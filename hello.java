@@ -4,5 +4,6 @@ public class Hello(){
 		System.out.println("hello worde");
 		System.out.println("hello!!!!");
 		System.out.println("git fenzhi");
+		System.out.println("git fenzhi");
 	}
 }
