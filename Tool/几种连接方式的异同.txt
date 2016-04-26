@@ -1,0 +1,34 @@
+一个WEB应用程序：
+1.在hibernate.cfg.xml如果这样配置：
+
+<property name="connection.url">
+ 		jdbc:mysql://192.168.1.143:3306/c8report 远程数据库ip地址数据库名
+		</property>
+		<!-- c8repuser -->
+		<property name="connection.username">root</property> 远程数据库用户名
+		<!-- mycomm123 -->
+		<property name="connection.password"></property> 远程数据库用户密码
+		<property name="connection.driver_class">
+			org.gjt.mm.mysql.Driver 
+		</property>
+		
+ 这样访问：http://localhost:8080/C8Report/index.jsp
+ 
+此时用的只是远程数据库，tomcat 还有程序代码都用的本机的  此时远程不用部署(war和tomcat)也可以访问
+
+2.不管hibernate.cfg.xml怎样配置：
+
+如果这样访问 192.168.1.134:8080/c8report/index.jsp
+
+那么此时就会完全依赖远端服务器，跟本地没有任何关系。所有配置都要在远程服务器上进行，这时候就会用到连接工具 例如：
+
+SSH Secure File Transfer Client
+**********************************（linux 环境下，有实例验证）
+SSH Secure Shell Client
+
+3.本地访问本地就不用说了，天天本地访问
+
+ 这样访问：http://localhost:8080/C8Report/index.jsp
+ 
+ 和本地访问远端只是hibernate.cfg.xml  的配置不同而已
+ 具体详见本文档 1
